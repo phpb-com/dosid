@@ -1,0 +1,16 @@
+name = "dosid"
+compatibility_date = "2022-06-17"
+# type = "javascript" is required to use the `[build]` section
+route = "*/*"
+
+
+main = "dist/index.mjs"
+[build]
+command = "yarn install && yarn test && yarn build"
+
+[durable_objects]
+bindings = [{name = "DOSID_COUNTER", class_name = "DOSIDCounter"}]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["DOSIDCounter"]

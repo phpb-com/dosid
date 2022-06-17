@@ -1,0 +1,4 @@
+tscOutDir
+dist
+.yarn
+.pnp.*

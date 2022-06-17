@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "dosid",
+  "version": "1.0.0",
+  "description": "A Durable Objects Short ID",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "format": "prettier --write '**/*.{ts,json}'",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"
+  },
+  "author": "Ian Matyssik",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.13.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/jest": "^28.1.1",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^28.1.1",
+    "prettier": "^2.7.1",
+    "rollup": "^2.75.6",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^28.0.5",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "hashids": "^2.2.10",
+    "hrw-hash": "^1.0.1",
+    "ohash": "^0.1.0"
+  },
+  "packageManager": "yarn@3.2.1"
+}

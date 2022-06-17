@@ -18,8 +18,12 @@ export default {
 }
 
 async function handleRequest (request: Request, env: Env) {
+  const url = new URL(request.url)
   // Instanciate hashids library
-  const hashids = new Hashids(env.DOSID_HASHIDS_SALT)
+  // Since salt for hashids will have direct impact on the unqiueness of the generated id,
+  // ensure that it is never changed after the first deployment. It is recommended to commit
+  // the salt value to the secure environment variable and fail if it is not set.
+  const hashids = new Hashids(env.DOSID_HASHIDS_SALT || 'dosid')
 
   // Derive DO name from continent, country, and colo
   const doName = {
@@ -34,8 +38,13 @@ async function handleRequest (request: Request, env: Env) {
   // Get DO Object
   const obj = env.DOSID_COUNTER.get(id)
 
-  // Fetch counter value and store it as bigint
+  // Fetch counter value
   const resp = await obj.fetch(request.url)
+  // Return debug info
+  if (url.pathname === '/debug') {
+    return new Response(`${resp}, worker DO id: ${id}`)
+  }
+  // Store counter value as bigint
   const doCounter = BigInt(await resp.text())
 
   // Create the final HashIDs

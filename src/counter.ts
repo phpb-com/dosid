@@ -14,6 +14,7 @@ export class DOSIDCounter {
 
   // Handle HTTP requests from clients.
   async fetch (request: Request) {
+    const url = new URL(request.url)
     // Returned numeric ID will consist of three parts (left to right):
     // 1) Durable Object stored counter value
     // 2) 9 bits (512 values) of shard value (shard id calculation should be based on physical location of DO)
@@ -34,6 +35,12 @@ export class DOSIDCounter {
       (await this.state.storage?.get(idTail.toString())) || 0n
     // Increment and store the counter value, meaning that we will never use 0 as a value
     await this.state.storage?.put(idTail.toString(), ++counterValue)
+
+    if (url.pathname === '/debug') {
+      return new Response(
+        `counterValue: ${counterValue}, shardID: ${shardID}, idTail: ${idTail}`
+      )
+    }
 
     // Return the final calculated numeric ID as a string
     return new Response(

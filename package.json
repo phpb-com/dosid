@@ -47,10 +47,8 @@
     "ohash": "0.1.0"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
+    "*": "prettier --write",
+    "*.ts": "eslint --fix"
   },
   "husky": {
     "hooks": {

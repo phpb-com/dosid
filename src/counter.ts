@@ -7,13 +7,13 @@ export class DOSIDCounter {
   state: DurableObjectState
   myId: string
 
-  constructor(state: DurableObjectState, env: Env) {
+  constructor (state: DurableObjectState, env: Env) {
     this.state = state
     this.myId = state.id.toString()
   }
 
   // Handle HTTP requests from clients.
-  async fetch(request: Request) {
+  async fetch (request: Request) {
     // Returned numeric ID will consist of three parts (left to right):
     // 1) Durable Object stored counter value
     // 2) 9 bits (512 values) of shard value (shard id calculation should be based on physical location of DO)
@@ -37,7 +37,7 @@ export class DOSIDCounter {
 
     // Return the final calculated numeric ID as a string
     return new Response(
-      String((counterValue << 16n) | (shardID << 7n) | idTail),
+      String((counterValue << 16n) | (shardID << 7n) | idTail)
     )
   }
 }

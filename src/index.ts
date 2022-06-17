@@ -8,16 +8,16 @@ interface Env {
 }
 
 export default {
-  async fetch(request: Request, env: Env) {
+  async fetch (request: Request, env: Env) {
     try {
       return await handleRequest(request, env)
     } catch (e) {
       return new Response(`${e}`)
     }
-  },
+  }
 }
 
-async function handleRequest(request: Request, env: Env) {
+async function handleRequest (request: Request, env: Env) {
   // Instanciate hashids library
   const hashids = new Hashids(env.DOSID_HASHIDS_SALT)
 
@@ -25,7 +25,7 @@ async function handleRequest(request: Request, env: Env) {
   const doName = {
     continent: request.cf?.continent || 'XX',
     country: request.cf?.country || 'XX',
-    colo: request.cf?.colo || 'XXX',
+    colo: request.cf?.colo || 'XXX'
   }
 
   // Derive DO id from DO name

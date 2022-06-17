@@ -3,7 +3,7 @@ import { hash } from 'ohash' // Import library for consistent hashing
 
 export interface Env {}
 
-export class DOSIDCounterV1 {
+export class DOSIDCounter {
   state: DurableObjectState
   myId: string
 

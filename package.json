@@ -12,7 +12,11 @@
     "format": "prettier --write '**/*.{ts,json}'",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "lint-staged": {
+      "*": "prettier --write",
+      "*.ts": "eslint --fix"
+    }
   },
   "author": "Ian Matyssik",
   "license": "MIT",
@@ -45,10 +49,6 @@
   "dependencies": {
     "hashids": "2.2.10",
     "ohash": "0.1.0"
-  },
-  "lint-staged": {
-    "*": "prettier --write",
-    "*.ts": "eslint --fix"
   },
   "husky": {
     "hooks": {

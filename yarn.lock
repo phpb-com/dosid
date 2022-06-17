@@ -1936,7 +1936,6 @@ __metadata:
     eslint-plugin-n: 15.2.3
     eslint-plugin-promise: 6.0.0
     hashids: 2.2.10
-    hrw-hash: 1.0.1
     isomorphic-fetch: 3.0.0
     jest: 28.1.1
     ohash: 0.1.0
@@ -2827,13 +2826,6 @@ __metadata:
   version: 2.2.10
   resolution: "hashids@npm:2.2.10"
   checksum: b65982baec1f184e287c9f2ae80303cc62ad752bdb742271754f82b81f7fdde987456d8a0440a1f8639af07fafa402a10ef77674d524247c098be07de3a765c8
-  languageName: node
-  linkType: hard
-
-"hrw-hash@npm:1.0.1":
-  version: 1.0.1
-  resolution: "hrw-hash@npm:1.0.1"
-  checksum: ebf78439c644911ea2c28682aa59fb20c6134eb2f0c00d83dc7288538dfdef182b541c849e1860e3517f26d9e7c4d084568d2cf21c605455b28d0b2087663cdf
   languageName: node
   linkType: hard
 

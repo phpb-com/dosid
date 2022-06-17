@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "hashids": "2.2.10",
-    "hrw-hash": "1.0.1",
     "ohash": "0.1.0"
   },
   "packageManager": "yarn@3.2.1"

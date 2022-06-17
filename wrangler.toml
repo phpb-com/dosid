@@ -1,7 +1,8 @@
 name = "dosid"
 compatibility_date = "2022-06-17"
 # type = "javascript" is required to use the `[build]` section
-route = "pastabin.io/dosid"
+route = ""
+zone_id = ""
 
 
 main = "dist/index.mjs"

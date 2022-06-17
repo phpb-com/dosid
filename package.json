@@ -8,7 +8,7 @@
     "build": "rollup -c",
     "test": "jest",
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler publish",
     "format": "prettier --write '**/*.{ts,json}'",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"

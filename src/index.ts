@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import Hashids from 'hashids'
-export { DOSIDCounterV1 } from './counter'
+export { DOSIDCounter } from './counter'
 
 interface Env {
   DOSID_COUNTER: DurableObjectNamespace

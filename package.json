@@ -11,7 +11,8 @@
     "deploy": "wrangler publish",
     "format": "prettier --write '**/*.{ts,json}'",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix"
+    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "postinstall": "husky install"
   },
   "author": "Ian Matyssik",
   "license": "MIT",
@@ -29,8 +30,10 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-n": "15.2.3",
     "eslint-plugin-promise": "6.0.0",
+    "husky": "^8.0.0",
     "isomorphic-fetch": "3.0.0",
     "jest": "28.1.1",
+    "lint-staged": "^13.0.2",
     "prettier": "2.7.1",
     "rollup": "2.75.6",
     "rollup-plugin-copy": "3.4.0",
@@ -42,6 +45,17 @@
   "dependencies": {
     "hashids": "2.2.10",
     "ohash": "0.1.0"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "packageManager": "yarn@3.2.1"
 }

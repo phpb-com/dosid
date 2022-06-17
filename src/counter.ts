@@ -38,7 +38,13 @@ export class DOSIDCounter {
 
     if (url.pathname === '/debug') {
       return new Response(
-        `counterValue: ${counterValue}, shardID: ${shardID}, idTail: ${idTail}`
+        JSON.stringify({
+          counterValue: counterValue.toString(),
+          shardID: shardID.toString(),
+          idTail: idTail.toString(),
+          myId: this.myId,
+          counter: String((counterValue << 16n) | (shardID << 7n) | idTail)
+        })
       )
     }
 

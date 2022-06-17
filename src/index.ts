@@ -1,4 +1,11 @@
 /* eslint-disable no-undef */
+/*
+ This is a sampkle implementation of the Cloudflare Worker
+ to use "dosid" to generate globaly unique but short ID strings.
+ If you need to use this in production, we recommend to lift neccessery code from
+ this implementation and then use it in your production code of the worker.
+ */
+
 import Hashids from 'hashids'
 export { DOSIDCounter } from './counter'
 
@@ -18,7 +25,9 @@ export default {
 }
 
 async function handleRequest (request: Request, env: Env) {
+  // Parse request URL
   const url = new URL(request.url)
+
   // Instanciate hashids library
   // Since salt for hashids will have direct impact on the unqiueness of the generated id,
   // ensure that it is never changed after the first deployment. It is recommended to commit
@@ -26,6 +35,7 @@ async function handleRequest (request: Request, env: Env) {
   const hashids = new Hashids(env.DOSID_HASHIDS_SALT || 'dosid')
 
   // Derive DO name from continent, country, and colo
+  // You may want to use other parameters to spread your shards across the globe
   const doName = {
     continent: request.cf?.continent || 'XX',
     country: request.cf?.country || 'XX',
@@ -40,15 +50,18 @@ async function handleRequest (request: Request, env: Env) {
 
   // Fetch counter value
   const resp = await obj.fetch(request.url)
+
   // Return debug info
   if (url.pathname === '/debug') {
-    return new Response(`${resp}, worker DO id: ${id}`)
+    return new Response((await resp.text()) + JSON.stringify(doName))
   }
+
   // Store counter value as bigint
   const doCounter = BigInt(await resp.text())
 
   // Create the final HashIDs
   const hashidsResp = hashids.encode(doCounter)
 
+  // Respond with the final HashIDs
   return new Response(hashidsResp)
 }

@@ -1,8 +1,8 @@
 name = "dosid"
 compatibility_date = "2022-06-17"
 # type = "javascript" is required to use the `[build]` section
-route = ""
-zone_id = ""
+# route = ""
+zone_id = "d41068e7d54552f43a72a3b1b847c3cf"
 
 
 main = "dist/index.mjs"

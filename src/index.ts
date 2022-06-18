@@ -59,7 +59,7 @@ async function handleRequest(request: Request, env: Env) {
   const resp = await obj.fetch(request.url)
 
   // Return debug info
-  if (url.pathname === '/debug') {
+  if (url.pathname.endsWith('/debug')) {
     return new Response((await resp.text()) + JSON.stringify(doName))
   }
 

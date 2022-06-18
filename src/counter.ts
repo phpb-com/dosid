@@ -45,7 +45,7 @@ export class DOSIDCounter {
     await this.state.storage?.put(idTail.toString(), counterValue)
 
     // Return debug info, if requested
-    if (url.pathname === '/debug') {
+    if (url.pathname.endsWith('/debug')) {
       return new Response(
         JSON.stringify({
           counterValue: counterValue.toString(),

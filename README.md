@@ -79,7 +79,7 @@ You can quickly start by cloning this repo and running `yarn install`. Before pe
 
 You will need to set some secret environment variables and modify wrangler.toml. Durable Objects (as of 2022 June) require you to have a paid worker plan with Cloudflare.
 
-- DOSID_HASHIDS_SALT - should be set to a random value between 8 and 32 ASCII characters. Example: `openssl rand -base64 15`. To set it now, run `openssl rand -base64 15 | yarn wrangler secret and put DOSID_HASHIDS_SALT` in the project directory.
+- DOSID_HASHIDS_SALT - should be set to a random value between 8 and 32 ASCII characters. Example: `openssl rand -base64 15`. To set it now, run `openssl rand -base64 15 | yarn wrangler secret put DOSID_HASHIDS_SALT` in the project directory.
 
 ### wrangler.toml
 
@@ -105,7 +105,9 @@ This project may be useful to you whenever you require to have random and yet se
 All are welcome to submit issues, ideas, pull requests, and patches
 
 ## Project using this project
-If you found this project useful, please consider making an "issue"  or pull request to add it to this list.
+
+If you found this project useful, please consider making an "issue" or pull request to add it to this list.
+
 - None that I am aware of so far ...
 
 ## License

@@ -83,9 +83,11 @@ You will need to set some secret environment variables and modify wrangler.toml.
 
 - DOSID_HASHIDS_SALT - should be set to a random value between 8 and 32 ASCII characters. Example: `openssl rand -base64 15`. To set it now, run `openssl rand -base64 15 | yarn wrangler secret put DOSID_HASHIDS_SALT` in the project directory.
 
-### wrangler.toml
+### [wrangler.toml](wrangler.toml)
 
 You will want to modify `wrangler.toml` to ensure that deployment works, or use as is with workers.dev domain. `route` parameter has to be set to the correct `zone_name`, and so is `pattern`. Be careful not to overtake your current domain/site/application routes.
+
+See [wrangler.toml](https://developers.cloudflare.com/workers/wrangler/configuration/) documentation for more info.
 
 ### Deployment
 

@@ -71,9 +71,11 @@ Total per ID (estimate) = $0.00000155, or $1.55 per 1 million IDs. You can shave
 
 ## Basic Usage
 
-**WARNING:** If you rely on the uniqueness of the generated IDs, the following parameters cannot change after the initial production deployment: **HashIDs Salt** (see the warning in the [code of the Worker](src/index.ts)), and generation of a shard (e.g., the textual representation that is passed to `idFromName` method of DO binding). You may also want to either back up your sequences or pad the ID sequence with additional bits that will encode version (e.g., 8 bits will give you 256 chances to reset)
+**WARNING:** If you rely on the uniqueness of the generated IDs, the following parameters cannot change after the initial production deployment: **HashIDs Salt** (see the warning in the [code of the worker](src/index.ts)), and generation of a shard (e.g., the textual representation that is passed to `idFromName` method of DO binding). You may also want to either back up your sequences or pad the ID sequence with additional bits that will encode version (e.g., 8 bits will give you 256 chances to reset)
 
 You can quickly start by cloning this repo and running `yarn install`. Before performing any further steps, please read the following sections.
+
+Please note that this project was designed to work at the edge, and may be no suitable for usage by the fixed source server to request new IDs. You may look into sharding strategy to adapt for this use case.
 
 ### Environment Variables
 
@@ -83,13 +85,13 @@ You will need to set some secret environment variables and modify wrangler.toml.
 
 ### wrangler.toml
 
-You will have to modify `wrangler.toml` to ensure that deployment works. `route` parameter has to be set to the correct `zone_name`, and so is `pattern`. Be careful not to overtake your current domain/site/application routes.
+You will want to modify `wrangler.toml` to ensure that deployment works, or use as is with workers.dev domain. `route` parameter has to be set to the correct `zone_name`, and so is `pattern`. Be careful not to overtake your current domain/site/application routes.
 
 ### Deployment
 
 Run `yarn deploy` to deploy Worker and durable object class.
 
-If you had `worker_dev` set to `true` you should get the Worker.dev name you will be able to access and get some IDs.
+If you had `workers_dev` set to `true` you should get the worker.dev name you will be able to access and get some IDs.
 
 ## Potential usage scenarios
 

@@ -1,20 +1,23 @@
-# Durable Objects TypeScript Counter template
+# Durable Objects Short ID (DOSID)
 
-## Note: You must use [wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update) 1.19.3 or newer to use this template.
+## Please read the [Durable Object documentation](https://developers.cloudflare.com/workers/learning/using-durable-objects) before using this repo.
 
-## Please read the [Durable Object documentation](https://developers.cloudflare.com/workers/learning/using-durable-objects) before using this template.
+## NOT TESTED IN PRODUCTION ENVIRONMENT
 
-A template for kick starting a Cloudflare Workers project using:
+This is an implementation of [short-duid](https://github.com/phpb-com/short-duid-js) that runs on top of Cloudflare and Durable Objects (requires paid worker plan).
 
-- Durable Objects
-- TypeScript
-- Jest for unit testing
-- Modules (ES Modules to be specific)
-- Rollup
-- Wrangler
+## Intro
 
-Worker code is in `src/`. The Durable Object `CounterTs` class is in `src/counter.ts`, and the eyeball script is in `index.ts`.
+The main idea behind this implementation is to utilize durable storage to maintain group of counters sharded across continents, countries and colocation spaces. No time element is used, we are relying only on counters.
 
-Rollup is configured to output a bundled ES Module to `dist/index.mjs`.
+## ID structure
 
-There's an example unit test in `src/index.test.ts`, which will run as part of `wrangler build`. To run tests on their own use `npm test`.
+The numeric ID is javascript `bigint` type, giving us 63 bits of positive integers (`2^64` == 9,223,372,036,854,775,808 or 9 quintillion 223 quadrillion 372 trillion 36 billion 854 million 775 thousand 808)
+
+## Basic Usage
+
+## Potential usage scenariouse
+
+## License
+
+MIT

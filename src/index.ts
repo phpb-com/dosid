@@ -70,5 +70,10 @@ async function handleRequest(request: Request, env: Env) {
   const hashidsResp = hashids.encode(doCounter)
 
   // Respond with the final HashIDs
-  return new Response(hashidsResp)
+  return new Response(
+    JSON.stringify({
+      id: hashidsResp,
+      nid: doCounter.toString(10)
+    })
+  )
 }

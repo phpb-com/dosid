@@ -28,10 +28,10 @@ export class DOSIDCounter {
     // Generate random id tail that will be used to store the counter value,
     // and use only last 7 bits (0 - 127). This gives us 128 counters per DO shard
     const randomVal = crypto.getRandomValues(new Uint8Array(1))
-    const idTail = BigInt(randomVal[0] & ((1 << 7) - 1) /* mask 7 bits */)
+    const idTail = BigInt.asUintN(7, BigInt(randomVal[0]))
 
     // 2) Calculate 10 bit shard id for the use in the final counter
-    const shardID = BigInt(hash(this.myId)) & ((1n << 9n) - 1n)
+    const shardID = BigInt.asUintN(9, BigInt(hash(this.myId)))
 
     // 1) Durable Object stored counter value
     // Read the counter value from durable storage / cache, or initialize it to 0
@@ -39,8 +39,7 @@ export class DOSIDCounter {
     // see: https://blog.cloudflare.com/durable-objects-easy-fast-correct-choose-three/
     let counterValue: bigint =
       (await this.state.storage?.get(idTail.toString())) || 0n
-    counterValue++ // Increment the counter before masking usable bits
-    counterValue &= (1n << 48n) - 1n // Clamp it at 48 bits to fit in bigint 64uint range
+    counterValue = BigInt.asUintN(48, ++counterValue) // Increment and clamp it at 48 bits to fit in bigint 64uint range
 
     // Increment and store the counter value, meaning that we will never use 0 as a value
     await this.state.storage?.put(idTail.toString(), counterValue)

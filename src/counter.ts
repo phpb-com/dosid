@@ -40,7 +40,7 @@ export class DOSIDCounter {
     let counterValue: bigint =
       (await this.state.storage?.get(idTail.toString())) || 0n
     counterValue++ // Increment the counter before masking usable bits
-    counterValue &= (1n << 47n) - 1n // Clamp it at 47 bits to fit in bigint positive range
+    counterValue &= (1n << 48n) - 1n // Clamp it at 48 bits to fit in bigint 64uint range
 
     // Increment and store the counter value, meaning that we will never use 0 as a value
     await this.state.storage?.put(idTail.toString(), counterValue)

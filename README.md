@@ -62,12 +62,12 @@ Generating each ID comes at a cost. Here is the simple breakdown as of 2022 June
 
 At a minimum you will endure one request to the worker, one request to the Durable Object and two requests to the storage (one read and one write). We will ignore bundled usage for this example:
 
-- Worker request (Bundled) = $0.00000015
+- Worker request (Bundled) = $0.0000005
 - DO Request = $0.00000015
 - DO GB-s (estimated) = $0.00000005 (about 0.004 GB-s per request to DO)
 - DO read + DO write = (read)$ $0.0000002 + (write) $0.000001 = (total) $0.0000012
 
-Total per ID (estimate) = $0.00000155, or $1.55 per 1 million IDs. You can shave off $0.15 per million requests by performing HashIDs calculation and request to DO in your Worker that needs the ID.
+Total per ID (estimate) = $0.0000019, or $1.9 per 1 million IDs. You can shave off $0.50 per million requests by performing HashIDs calculation and request to DO in your Worker that needs the ID.
 
 ## Basic Usage
 

@@ -104,6 +104,10 @@ This project may be useful to you whenever you require to have random and yet se
 
 All are welcome to submit issues, ideas, pull requests, and patches
 
+## Project using this project
+If you found this project useful, please consider making an "issue"  or pull request to add it to this list.
+- <none that I am aware of>
+
 ## License
 
 The MIT License (MIT)

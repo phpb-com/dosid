@@ -49,7 +49,7 @@ While sub-shard/tail is generated from the crypto-random number in the DO class:
 // Generate random id tail that will be used to store the counter value,
 // and use only last 7 bits (0 - 127). This gives us 128 counters per DO shard
 const randomVal = crypto.getRandomValues(new Uint8Array(1))
-const idTail = BigInt(randomVal[0] & ((1 << 7) - 1) /* mask 7 bits */)
+const idTail = BigInt.asUintN(7, BigInt(randomVal[0]))
 ```
 
 ### Generated ID

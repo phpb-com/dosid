@@ -41,7 +41,7 @@ export class DOSIDCounter {
       (await this.state.storage?.get(idTail.toString())) || 0n
     counterValue = BigInt.asUintN(48, ++counterValue) // Increment and clamp it at 48 bits to fit in bigint 64uint range
 
-    // Increment and store the counter value, meaning that we will never use 0 as a value
+    // Store the counter value, meaning that we will never use 0 as a value
     await this.state.storage?.put(idTail.toString(), counterValue)
 
     // Return debug info, if requested

@@ -2249,7 +2249,7 @@ __metadata:
     ts-jest: 28.0.5
     tslib: 2.4.0
     typescript: 4.7.4
-    wrangler: ^2.0.14
+    wrangler: 2.0.14
   languageName: unknown
   linkType: soft
 
@@ -6329,7 +6329,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^2.0.14":
+"wrangler@npm:2.0.14":
   version: 2.0.14
   resolution: "wrangler@npm:2.0.14"
   dependencies:

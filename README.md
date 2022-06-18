@@ -12,15 +12,15 @@ The main idea behind this implementation is to utilize durable storage to mainta
 
 ## ID structure
 
-The numeric ID is javascript `bigint` type, giving us 63 bits of positive integers (`2^64` == `9,223,372,036,854,775,808` or `9 quintillion 223 quadrillion 372 trillion 36 billion 854 million 775 thousand 808`)
+The numeric ID is javascript `bigint` type, giving us 63 bits of positive integers (`2^64` == `18,446,744,073,709,551,616` or `18 quintillion 446 quadrillion 744 trillion 73 billion 709 million 551 thousand 616`)
 
-We allocate 47 left most bits to the counter, 9 bits (512) for the shard ID, and 7 bits (128) for the sub-shard/tail.
+We allocate 48 left most bits to the counter, 9 bits (512) for the shard ID, and 7 bits (128) for the sub-shard/tail.
 
 ### Counter
 
 The value stored in the Durable Object storage is incremented with each request.
 
-Clampped to 47 bits, giving `140,737,488,355,328` - 1 values, or `140 trillion 737 billion 488 million 355 thousand 328`
+Clampped to 48 bits, giving `281,474,976,710,656` - 1 values, or `281 trillion 474 billion 976 million 710 thousand 656`
 
 ### Shard and sub-shard
 

@@ -1,8 +1,8 @@
 name = "dosid"
 compatibility_date = "2022-06-17"
-worker_dev = false
+workers_dev = true
 usage_model = "bundled"
-route = { pattern = "*/*", zone_name = "example.com" }
+#route = { pattern = "*", zone_name = "example.com" }
 
 
 main = "dist/index.mjs"

@@ -12,7 +12,7 @@ The main idea behind this implementation is to utilize durable storage to mainta
 
 ## ID structure
 
-The numeric ID is javascript `bigint` type, giving us 63 bits of positive integers (`2^64` == `18,446,744,073,709,551,616` or `18 quintillion 446 quadrillion 744 trillion 73 billion 709 million 551 thousand 616`)
+The numeric ID is javascript `bigint` type, giving us 64 bits of positive integers (`2^64` == `18,446,744,073,709,551,616` or `18 quintillion 446 quadrillion 744 trillion 73 billion 709 million 551 thousand 616`)
 
 We allocate 48 left most bits to the counter, 9 bits (512) for the shard ID, and 7 bits (128) for the sub-shard/tail.
 
@@ -28,7 +28,7 @@ The total number of counters is `2^16` == `65,535`, or 128 counters per shard (5
 
 Sharding happens in the Worker by creating a durable object id from a specifically generated name:
 
-Inside of the Worker (`DOSID_COUNTER` is DO binding):
+Inside of the [Worker](src/index.ts) (`DOSID_COUNTER` is DO binding):
 
 ```typescript
 // Derive DO name from continent, country, and colo
@@ -43,7 +43,7 @@ const doName = {
 const id = env.DOSID_COUNTER.idFromName(JSON.stringify(doName))
 ```
 
-While sub-shard/tail is generated from the crypto-random number in the DO class:
+While sub-shard/tail is generated from the crypto-random number in the [DO class](src/idgenerator.ts):
 
 ```typescript
 // Generate random id tail that will be used to store the counter value,
@@ -58,16 +58,7 @@ The ID is generated using [HashIDs](https://hashids.org/), which is implemented 
 
 ## Costs
 
-Generating each ID comes at a cost. Here is the simple breakdown as of 2022 June ([pricing](https://developers.cloudflare.com/workers/platform/pricing)):
-
-At a minimum you will endure one request to the worker, one request to the Durable Object and two requests to the storage (one read and one write). We will ignore bundled usage for this example:
-
-- Worker request (Bundled) = $0.0000005
-- DO Request = $0.00000015
-- DO GB-s (estimated) = $0.00000005 (about 0.004 GB-s per request to DO)
-- DO read + DO write = (read)$ $0.0000002 + (write) $0.000001 = (total) $0.0000012
-
-Total per ID (estimate) = $0.0000019, or $1.9 per 1 million IDs. You can shave off $0.50 per million requests by performing HashIDs calculation and request to DO in your Worker that needs the ID.
+Generating each ID comes at a cost. Refer to the Cloudflare ([pricing](https://developers.cloudflare.com/workers/platform/pricing)). Generally it should cost under $2 per million IDs.
 
 ## Basic Usage
 

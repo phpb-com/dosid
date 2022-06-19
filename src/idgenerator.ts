@@ -54,11 +54,11 @@ export class DOSIDCounter {
     // 3) Durable Object stored counter value ID
     // Generate random id tail that will be used to store the counter value,
     // and use only last 7 bits (0 - 127). This gives us 128 counters per DO shard
-    const randomVal = crypto.getRandomValues(new Uint8Array(1))
-    const idTail = BigInt.asUintN(7, BigInt(randomVal[0]))
+    const randomVal: Uint8Array = crypto.getRandomValues(new Uint8Array(1))
+    const idTail: bigint = BigInt.asUintN(7, BigInt(randomVal[0]))
 
     // 2) Calculate 10 bit shard id for the use in the final counter
-    const shardID = BigInt.asUintN(9, BigInt(hash(this.myId)))
+    const shardID: bigint = BigInt.asUintN(9, BigInt(hash(this.myId)))
 
     // 1) Durable Object stored counter value
     // Read the counter value from durable storage / cache, or initialize it to 0
@@ -71,7 +71,7 @@ export class DOSIDCounter {
     await this.state.storage?.put(idTail.toString(), counterValue) // Store the updated counter value
 
     // Instanciate hashids library
-    const hashids = new Hashids(this.env.DOSID_HASHIDS_SALT)
+    const hashids: Hashids = new Hashids(this.env.DOSID_HASHIDS_SALT)
 
     // Generate the final IDs
     const hashIds: ArrayLike<string> = new Array(idCount)
@@ -92,7 +92,7 @@ export class DOSIDCounter {
           storedCounterValue: counterValue.toString(),
           shardID: shardID.toString(),
           idTail: idTail.toString(),
-          hashIds: hashIds.toString()
+          hashIds: hashIds.toString().substring(0, 1024)
         })
       } catch (e) {
         console.log(e)

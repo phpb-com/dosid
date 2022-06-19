@@ -4,8 +4,12 @@ workers_dev = true
 usage_model = "bundled"
 #route = { pattern = "*", zone_name = "example.com" }
 
-
 main = "dist/index.mjs"
+
+[vars]
+DEBUG = false
+DOSID_MAX_COUNT = 128
+
 [build]
 command = "yarn install && yarn test && yarn build"
 

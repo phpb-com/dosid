@@ -28,9 +28,9 @@ async function handleRequest(request: Request, env: Env) {
   // WARNING: Do not attempt to change the structure of doName after initial production usage,
   // or you will start generating spontaniouse duplicates.
   const doName = {
-    continent: request.cf?.continent || 'XX',
-    country: request.cf?.country || 'XX',
-    colo: request.cf?.colo || 'XXX'
+    continent: request.cf?.continent ?? 'XX',
+    country: request.cf?.country ?? 'XX',
+    colo: request.cf?.colo ?? 'XXX'
   }
 
   // Derive DO id from DO name

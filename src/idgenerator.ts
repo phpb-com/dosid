@@ -18,7 +18,7 @@ export class DOSIDCounter {
     this.state = state
     this.myId = state.id.toString()
     this.env = env
-    this.debug = env.DEBUG || false
+    this.debug = env.DEBUG ?? false
   }
 
   // Handle HTTP requests from clients.

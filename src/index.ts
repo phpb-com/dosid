@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /*
- This is a sampkle implementation of the Cloudflare Worker
+ This is a sample implementation of the Cloudflare Worker
  to use "dosid" to generate globaly unique but short ID strings.
  If you need to use this in production, we recommend to lift neccessery code from
  this implementation and then use it in your production code of the worker.

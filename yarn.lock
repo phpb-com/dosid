@@ -2234,7 +2234,7 @@ __metadata:
     isomorphic-fetch: 3.0.0
     jest: 28.1.3
     lint-staged: 13.0.3
-    ohash: 0.1.0
+    ohash: 0.1.4
     prettier: 2.7.1
     rollup: 2.76.0
     rollup-plugin-copy: 3.4.0
@@ -4849,8 +4849,8 @@ __metadata:
   linkType: hard
 
 "node-gyp@npm:latest":
-  version: 9.0.0
-  resolution: "node-gyp@npm:9.0.0"
+  version: 9.1.0
+  resolution: "node-gyp@npm:9.1.0"
   dependencies:
     env-paths: ^2.2.0
     glob: ^7.1.4
@@ -4864,7 +4864,7 @@ __metadata:
     which: ^2.0.2
   bin:
     node-gyp: bin/node-gyp.js
-  checksum: 4d8ef8860f7e4f4d86c91db3f519d26ed5cc23b48fe54543e2afd86162b4acbd14f21de42a5db344525efb69a991e021b96a68c70c6e2d5f4a5cb770793da6d3
+  checksum: 1437fa4a879b5b9010604128e8da8609b57c66034262087539ee04a8b764b8436af2be01bab66f8fc729a3adba2dcc21b10a32b9f552696c3fa8cd657d134fc4
   languageName: node
   linkType: hard
 
@@ -4967,10 +4967,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ohash@npm:0.1.0":
-  version: 0.1.0
-  resolution: "ohash@npm:0.1.0"
-  checksum: b2bfde97c96bb4e71f3e0b7718239c7e49435394f1f562e0d21a069b84302bea0a235c65e2615009f6a4e2008963914917bfcd576d65ff56016f174d0b1e206b
+"ohash@npm:0.1.4":
+  version: 0.1.4
+  resolution: "ohash@npm:0.1.4"
+  checksum: 859ac69ea02201f7aef4c5ee6d3b9ef009c9e58c24fb4fa67477e7bc431fa7a2bf74d8b814472da55a8e87c318f0c36081dddc729b71aa09a7e336381d4be636
   languageName: node
   linkType: hard
 

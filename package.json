@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "hashids": "2.2.10",
-    "ohash": "0.1.0"
+    "ohash": "0.1.4"
   },
   "lint-staged": {
     "*.{ts,md,json}": "prettier --write",

@@ -2236,7 +2236,7 @@ __metadata:
     lint-staged: 13.0.3
     ohash: 0.1.0
     prettier: 2.7.1
-    rollup: 2.76.0
+    rollup: 2.77.0
     rollup-plugin-copy: 3.4.0
     rollup-plugin-terser: 7.0.2
     ts-jest: 28.0.5
@@ -4519,9 +4519,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^7.7.1":
-  version: 7.13.0
-  resolution: "lru-cache@npm:7.13.0"
-  checksum: 95a13e0f3691db9be3e78b597e347c2a4911f7303a514076dbc185b472683fa6e06dcaad74b5fc35fa1192c2cfe4b0bbaf3778b5066503eedd1b92bfec864c4c
+  version: 7.13.1
+  resolution: "lru-cache@npm:7.13.1"
+  checksum: f53c7dd098a7afd6342b23f7182629edff206c7665de79445a7f5455440e768a4d1c6ec52e1a16175580c71535c9437dfb6f6bc22ca1a0e4a7454a97cde87329
   languageName: node
   linkType: hard
 
@@ -4849,8 +4849,8 @@ __metadata:
   linkType: hard
 
 "node-gyp@npm:latest":
-  version: 9.0.0
-  resolution: "node-gyp@npm:9.0.0"
+  version: 9.1.0
+  resolution: "node-gyp@npm:9.1.0"
   dependencies:
     env-paths: ^2.2.0
     glob: ^7.1.4
@@ -4864,7 +4864,7 @@ __metadata:
     which: ^2.0.2
   bin:
     node-gyp: bin/node-gyp.js
-  checksum: 4d8ef8860f7e4f4d86c91db3f519d26ed5cc23b48fe54543e2afd86162b4acbd14f21de42a5db344525efb69a991e021b96a68c70c6e2d5f4a5cb770793da6d3
+  checksum: 1437fa4a879b5b9010604128e8da8609b57c66034262087539ee04a8b764b8436af2be01bab66f8fc729a3adba2dcc21b10a32b9f552696c3fa8cd657d134fc4
   languageName: node
   linkType: hard
 
@@ -5474,9 +5474,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:2.76.0":
-  version: 2.76.0
-  resolution: "rollup@npm:2.76.0"
+"rollup@npm:2.77.0":
+  version: 2.77.0
+  resolution: "rollup@npm:2.77.0"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -5484,7 +5484,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 58293e1c63c11d4afcfcf619601d5c5136dd3d0c9d3bd6a0b6141fede32027edc1eb53873bbb9a9c1e95e86c67f6ad66185720031b6eadf325972174d1d8fbcb
+  checksum: 74ccc98429709984a89af636250833e7502d87f1d9c6d96ebfe4b52030ebf94b9f6b84b8ab476670329a61d54b681d35eecdc601bac5b5396b099b1ea69970ef
   languageName: node
   linkType: hard
 

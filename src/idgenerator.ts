@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { hash } from 'ohash' // Import library for consistent hashing
+import { murmurHash as hash } from 'ohash' // Import library for consistent hashing
 import Hashids from 'hashids'
 
 export interface Env {

@@ -8,6 +8,8 @@ This project is a variant of the implementation of [short-duid](https://github.c
 
 ## Intro
 
+This is an implementation of the short and URL-safe ID generator that is deployable across the global Cloudflare infrastructure. The repository has the code for the durable object, as well as Worker code to fetch from it.
+
 The main idea behind this implementation is to utilize durable storage to maintain a group of counters sharded across continents, countries, and colocation spaces. We do not use the time element and rely only on counters. The generated text ID is URL safe and short, thanks to [hashids](https://hashids.org/).
 
 ## ID structure
@@ -20,7 +22,7 @@ We allocate 48 left most bits to the counter, 9 bits (512) for the shard ID, and
 
 The value stored in the Durable Object storage is incremented with each request.
 
-Clampped to 48 bits, giving `281,474,976,710,656` - 1 values, or `281 trillion 474 billion 976 million 710 thousand 656`
+Clamped to 48 bits, giving `281,474,976,710,656` - 1 values, or `281 trillion 474 billion 976 million 710 thousand 656`
 
 ### Shard and sub-shard
 

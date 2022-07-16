@@ -9,6 +9,8 @@ wasm-pack.log
 worker/
 node_modules/
 .cargo-ok
+.secret*
+.env
 
 #Yarn2 
 .pnp.*

@@ -111,7 +111,7 @@ The last line of the output should have your workers hostname, i.e., `dosid.<you
 Set the salt for hashids:
 
 ```sh
-dosid % openssl rand -base64 15 | tee .secet_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT
+openssl rand -base64 15 | tee .secet_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT
 ```
 
 The salt will be saved in `.secet_hashids_salt` file which you should backup and remove.

@@ -1,6 +1,6 @@
 # Durable Objects Short ID (DOSID)
 
-## Please read the [Durable Object documentation](https://developers.cloudflare.com/workers/learning/using-durable-objects) before using this repo.
+## Please read the [Durable Object documentation](https://developers.cloudflare.com/workers/learning/using-durable-objects) before using this repo
 
 ## NOT TESTED IN PRODUCTION ENVIRONMENT
 
@@ -62,6 +62,62 @@ The ID is generated using [HashIDs](https://hashids.org/), which is implemented 
 
 Generating each ID comes at a cost. Refer to the Cloudflare ([pricing](https://developers.cloudflare.com/workers/platform/pricing)). Generally it should cost under $2 per million IDs.
 
+## Quick start
+
+Prerequisits
+
+- node 16.X
+- yarn 3.2.1 or later
+- Cloudflare account with paid Workers plan (DO is only availble with the paid plan)
+
+Clone this repository:
+
+`git clone git@github.com:phpb-com/dosid.git`
+
+Change directory to the newly cloned repository:
+
+`cd docid`
+
+Install the dependencies:
+
+`yarn install`
+
+Check if you are loged into the cloudflare account with wrangler:
+
+`yarn wrangler whoami`
+
+If not logged-in, please do so (skip this step if you are already logged-in):
+
+`yarn wrangler login`
+
+Deploy the durable object and its Worker:
+
+`yarn deploy`
+
+The last line of the output should have your workers hostname, i.e., `dosid.<your worker subdomain>.workers.dev`
+
+Set the salt for hashids:
+`dosid % openssl rand -base64 15 | tee .secet_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT`
+
+The salt will be saved in `.secet_hashids_salt` file which you should backup and remove.
+
+Query your new worker to generate first ID:
+`curl https://dosid.<your worker subdomain>.workers.dev`
+
+You should see the output similare to the following:
+
+`{"hashIds":["oYxnB"]}`
+
+Or, if you need to generate multiple IDs, please add `count` variable with the specific number:
+
+`curl 'https://dosid.<your worker subdomain>.workers.dev/?count=10'`
+
+Which should produce the output similar to the follwoing:
+
+`{"hashIds":["wjRaP","Ob6J7","3OwrM","ka9aP","N4Em1","Oo0qr","3Xa0v","mEoov","NE1R4","O4vWQ"]}`
+
+That is all to it. Now go ahead and see how you can integrate it into your app or workflow.
+
 ## Basic Usage
 
 **WARNING:** If you rely on the uniqueness of the generated IDs, the following parameters cannot change after the initial production deployment: **HashIDs Salt** (see the warning in the [code of the worker](src/index.ts)), and generation of a shard (e.g., the textual representation that is passed to `idFromName` method of DO binding). You may also want to either back up your sequences or pad the ID sequence with additional bits that will encode version (e.g., 8 bits will give you 256 chances to reset)
@@ -95,7 +151,7 @@ If you had `workers_dev` set to `true` you should get the worker.dev name you wi
 This project may be useful to you whenever you require to have random and yet semi-unpredictable IDs. Some examples include:
 
 - URL shorteners
-- Eser-generated content URLs/IDs
+- User-generated content URLs/IDs
 
 ## Contributing
 

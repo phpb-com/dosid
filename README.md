@@ -72,49 +72,73 @@ Prerequisits
 
 Clone this repository:
 
-`git clone git@github.com:phpb-com/dosid.git`
+```sh
+git clone git@github.com:phpb-com/dosid.git
+```
 
 Change directory to the newly cloned repository:
 
-`cd docid`
+```sh
+cd docid
+```
 
 Install the dependencies:
 
-`yarn install`
+```sh
+yarn install
+```
 
 Check if you are loged into the cloudflare account with wrangler:
 
-`yarn wrangler whoami`
+```sh
+yarn wrangler whoami
+```
 
 If not logged-in, please do so (skip this step if you are already logged-in):
 
-`yarn wrangler login`
+```sh
+yarn wrangler login
+```
 
 Deploy the durable object and its Worker:
 
-`yarn deploy`
+```sh
+yarn deploy
+```
 
 The last line of the output should have your workers hostname, i.e., `dosid.<your worker subdomain>.workers.dev`
 
 Set the salt for hashids:
-`dosid % openssl rand -base64 15 | tee .secet_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT`
+
+```sh
+dosid % openssl rand -base64 15 | tee .secet_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT
+```
 
 The salt will be saved in `.secet_hashids_salt` file which you should backup and remove.
 
 Query your new worker to generate first ID:
-`curl https://dosid.<your worker subdomain>.workers.dev`
+
+```sh
+curl https://dosid.<your worker subdomain>.workers.dev
+```
 
 You should see the output similare to the following:
 
-`{"hashIds":["oYxnB"]}`
+```json
+{"hashIds":["oYxnB"]}
+```
 
 Or, if you need to generate multiple IDs, please add `count` variable with the specific number:
 
-`curl 'https://dosid.<your worker subdomain>.workers.dev/?count=10'`
+```sh
+curl 'https://dosid.<your worker subdomain>.workers.dev/?count=10'
+```
 
 Which should produce the output similar to the follwoing:
 
-`{"hashIds":["wjRaP","Ob6J7","3OwrM","ka9aP","N4Em1","Oo0qr","3Xa0v","mEoov","NE1R4","O4vWQ"]}`
+```json
+{"hashIds":["wjRaP","Ob6J7","3OwrM","ka9aP","N4Em1","Oo0qr","3Xa0v","mEoov","NE1R4","O4vWQ"]}
+```
 
 That is all to it. Now go ahead and see how you can integrate it into your app or workflow.
 

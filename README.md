@@ -2,9 +2,11 @@
 
 ## Please read the [Durable Object documentation](https://developers.cloudflare.com/workers/learning/using-durable-objects) before using this repo
 
-## NOT TESTED IN PRODUCTION ENVIRONMENT
+## NOT SAFE FOR PRODUCTION ENVIRONMENT UNTIL POSSIBLE COLLISION ISSUE ([#34](https://github.com/phpb-com/dosid/issues/34)) IS RESOLVED
 
 This project is a variant of the implementation of [short-duid](https://github.com/phpb-com/short-duid-js) that runs on top of Cloudflare and Durable Objects (requires paid worker plan).
+
+
 
 ## Intro
 

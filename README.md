@@ -6,8 +6,6 @@
 
 This project is a variant of the implementation of [short-duid](https://github.com/phpb-com/short-duid-js) that runs on top of Cloudflare and Durable Objects (requires paid worker plan).
 
-
-
 ## Intro
 
 This is an implementation of the short and URL-safe ID generator that is deployable across the global Cloudflare infrastructure. The repository has the code for the durable object, as well as Worker code to fetch from it.
@@ -113,7 +111,7 @@ The last line of the output should have your workers hostname, i.e., `dosid.<you
 Set the salt for hashids:
 
 ```sh
-openssl rand -base64 15 | tee .secet_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT
+openssl rand -base64 15 | tee .secret_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT
 ```
 
 The salt will be saved in `.secet_hashids_salt` file which you should backup and remove.
@@ -127,7 +125,7 @@ curl https://dosid.<your worker subdomain>.workers.dev
 You should see the output similare to the following:
 
 ```json
-{"hashIds":["oYxnB"]}
+{ "hashIds": ["oYxnB"] }
 ```
 
 Or, if you need to generate multiple IDs, please add `count` variable with the specific number:
@@ -139,7 +137,20 @@ curl 'https://dosid.<your worker subdomain>.workers.dev/?count=10'
 Which should produce the output similar to the follwoing:
 
 ```json
-{"hashIds":["wjRaP","Ob6J7","3OwrM","ka9aP","N4Em1","Oo0qr","3Xa0v","mEoov","NE1R4","O4vWQ"]}
+{
+  "hashIds": [
+    "wjRaP",
+    "Ob6J7",
+    "3OwrM",
+    "ka9aP",
+    "N4Em1",
+    "Oo0qr",
+    "3Xa0v",
+    "mEoov",
+    "NE1R4",
+    "O4vWQ"
+  ]
+}
 ```
 
 That is all to it. Now go ahead and see how you can integrate it into your app or workflow.

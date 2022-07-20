@@ -2,7 +2,7 @@
 
 ## Please read the [Durable Object documentation](https://developers.cloudflare.com/workers/learning/using-durable-objects) before using this repo
 
-## NOT SAFE FOR PRODUCTION ENVIRONMENT UNTIL POSSIBLE COLLISION ISSUE ([#34](https://github.com/phpb-com/dosid/issues/34)) IS RESOLVED
+## NOT TESTED IN PRODUCTION ENVIRONMENT BUT SHOULD BE SAFE TO USE
 
 This project is a variant of the implementation of [short-duid](https://github.com/phpb-com/short-duid-js) that runs on top of Cloudflare and Durable Objects (requires paid worker plan).
 
@@ -30,7 +30,7 @@ The total number of counters is `2^16` == `65,535`, or 128 counters per shard (5
 
 Sharding happens in the Worker by creating a durable object id from a specifically generated name:
 
-Inside of the [Worker](src/index.ts) (`DOSID_COUNTER` is DO binding):
+Inside of the [Worker](src/index.ts) (`DOSID_COUNTER` is DO binding for the ID generator, and `DOSID_SHARDER` is for the central and unique generation of shard IDs):
 
 ```typescript
 // Derive DO name from continent, country, and colo
@@ -45,7 +45,7 @@ const doName = {
 const id = env.DOSID_COUNTER.idFromName(JSON.stringify(doName))
 ```
 
-While sub-shard/tail is generated from the crypto-random number in the [DO class](src/idgenerator.ts):
+While sub-shard/tail is generated from the crypto-random number in the [DO class](src/idgenerator.ts). This is done to diversify generated IDs and make them less predictable.
 
 ```typescript
 // Generate random id tail that will be used to store the counter value,
@@ -56,7 +56,7 @@ const idTail = BigInt.asUintN(7, BigInt(randomVal[0]))
 
 ### Generated ID
 
-The ID is generated using [HashIDs](https://hashids.org/), which is implemented by [hashids.js](https://github.com/niieani/hashids.js). The Worker performs the conversion of numeric ID into actual ID, not Durable Object class.
+The ID is generated using [HashIDs](https://hashids.org/), which is implemented by [hashids.js](https://github.com/niieani/hashids.js). The DO performs the conversion of numeric ID into actual ID, but also returns numeric IDs that were used as a source for the hashids.
 
 ## Costs
 
@@ -125,7 +125,10 @@ curl https://dosid.<your worker subdomain>.workers.dev
 You should see the output similare to the following:
 
 ```json
-{ "hashIds": ["oYxnB"] }
+{
+  "hashIds": ["wX4V"],
+  "numericIds": ["65652"]
+}
 ```
 
 Or, if you need to generate multiple IDs, please add `count` variable with the specific number:
@@ -139,16 +142,28 @@ Which should produce the output similar to the follwoing:
 ```json
 {
   "hashIds": [
-    "wjRaP",
-    "Ob6J7",
-    "3OwrM",
-    "ka9aP",
-    "N4Em1",
-    "Oo0qr",
-    "3Xa0v",
-    "mEoov",
-    "NE1R4",
-    "O4vWQ"
+    "6xNvk",
+    "yMlJW",
+    "naaVw",
+    "vbx6L",
+    "6R0O6",
+    "3oXMz",
+    "n11E9",
+    "v61a0",
+    "eXqrJ",
+    "3nrX"
+  ],
+  "numericIds": [
+    "655553",
+    "590017",
+    "524481",
+    "458945",
+    "393409",
+    "327873",
+    "262337",
+    "196801",
+    "131265",
+    "65729"
   ]
 }
 ```
@@ -167,7 +182,7 @@ Please note that this project was designed to work at the edge, and may be no su
 
 You will need to set some secret environment variables and modify wrangler.toml. Durable Objects (as of 2022 June) require you to have a paid worker plan with Cloudflare.
 
-- DOSID_HASHIDS_SALT - should be set to a random value between 8 and 32 ASCII characters. Example: `openssl rand -base64 15`. To set it now, run `openssl rand -base64 15 | yarn wrangler secret put DOSID_HASHIDS_SALT` in the project directory.
+- DOSID_HASHIDS_SALT - should be set to a random value between 8 and 32 ASCII characters. Example: `openssl rand -base64 15`. To set it now, run `openssl rand -base64 15 | tee .secret_hashids_salt | yarn wrangler secret put DOSID_HASHIDS_SALT` in the project directory.
 
 ### [wrangler.toml](wrangler.toml)
 
@@ -189,6 +204,7 @@ This project may be useful to you whenever you require to have random and yet se
 
 - URL shorteners
 - User-generated content URLs/IDs
+- Anything that requires for you to generate a bunch of unqeue and short strings
 
 ## Contributing
 

@@ -21,7 +21,7 @@ export class DOSIDSharder {
     // to the storage while blocking concurrent access
     await this.state.blockConcurrencyWhile(async () => {
       this.nextShardId =
-        (await this.state.storage.get<bigint>('nextShardId')) ?? 0n
+        (await this.state.storage?.get<bigint>('nextShardId')) ?? 0n
       this.state.storage?.put<bigint>('nextShardId', this.nextShardId + 1n)
     })
 

@@ -46,8 +46,7 @@
     "wrangler": "2.0.22"
   },
   "dependencies": {
-    "hashids": "2.2.10",
-    "ohash": "0.1.4"
+    "hashids": "2.2.10"
   },
   "lint-staged": {
     "*.{ts,md,json}": "prettier --write",

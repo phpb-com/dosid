@@ -14,8 +14,8 @@ DOSID_MAX_COUNT = 128
 command = "yarn install && yarn test && yarn build"
 
 [durable_objects]
-bindings = [{name = "DOSID_COUNTER", class_name = "DOSIDCounter"}]
+bindings = [{name = "DOSID_COUNTER", class_name = "DOSIDCounter"}, {name = "DOSID_SHARDER", class_name = "DOSIDSharder"}]
 
 [[migrations]]
 tag = "v1" # Should be unique for each entry
-new_classes = ["DOSIDCounter"]
+new_classes = ["DOSIDCounter", "DOSIDSharder"]

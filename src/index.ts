@@ -7,6 +7,7 @@
  */
 
 export { DOSIDCounter } from './idgenerator'
+export { DOSIDSharder } from './sharder'
 
 interface Env {
   DOSID_COUNTER: DurableObjectNamespace

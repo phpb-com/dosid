@@ -2293,7 +2293,7 @@ __metadata:
     ts-jest: 28.0.7
     tslib: 2.4.0
     typescript: 4.7.4
-    wrangler: 2.0.24
+    wrangler: 2.0.25
   languageName: unknown
   linkType: soft
 
@@ -6410,9 +6410,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.0.24":
-  version: 2.0.24
-  resolution: "wrangler@npm:2.0.24"
+"wrangler@npm:2.0.25":
+  version: 2.0.25
+  resolution: "wrangler@npm:2.0.25"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -6433,7 +6433,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 136409c159f0f2d54425b53c55c63dc0cd474c938df456bb7172835620de3aeb1c4c9ba5aabf41e48b0dc9667e0eb743fb0b167fc14df1a81146450e8203b94b
+  checksum: e5b20d513b57e8fa8d8251ee1613d9d247a9f933f9e648596433945a8a7a7f555f5108a21c020be67f0e8794e6f0effda1796a9f0914f7c21c218eeba5dd7ed1
   languageName: node
   linkType: hard
 

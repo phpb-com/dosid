@@ -2342,7 +2342,7 @@ __metadata:
     ts-jest: 29.0.2
     tslib: 2.4.0
     typescript: 4.8.3
-    wrangler: 2.1.6
+    wrangler: 2.1.7
   languageName: unknown
   linkType: soft
 
@@ -4764,7 +4764,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"miniflare@npm:^2.8.1":
+"miniflare@npm:2.9.0":
   version: 2.9.0
   resolution: "miniflare@npm:2.9.0"
   dependencies:
@@ -6489,18 +6489,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.1.6":
-  version: 2.1.6
-  resolution: "wrangler@npm:2.1.6"
+"wrangler@npm:2.1.7":
+  version: 2.1.7
+  resolution: "wrangler@npm:2.1.7"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
     "@esbuild-plugins/node-modules-polyfill": ^0.1.4
+    "@miniflare/core": 2.9.0
+    "@miniflare/d1": 2.9.0
+    "@miniflare/durable-objects": 2.9.0
     blake3-wasm: ^2.1.5
     chokidar: ^3.5.3
     esbuild: 0.14.51
     fsevents: ~2.3.2
-    miniflare: ^2.8.1
+    miniflare: 2.9.0
     nanoid: ^3.3.3
     path-to-regexp: ^6.2.0
     selfsigned: ^2.0.1
@@ -6512,7 +6515,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 9149a3ea500e60dce5a26ce08a69f144ea25bdef71829020003621272a1e3edc13882138e24bc66d82a0d9b86b2e98d5adb1f7e58b47316e3c5dd021324c21c6
+  checksum: 597efaf7e9c42c27077d0e6191c2d8f3cb0396a18497837ee0e3a470d1b4844bdd4ef4a6d3ce6f3ba718de4815d2d5a8363d26fea0958c744da5bab9f6ca4582
   languageName: node
   linkType: hard
 

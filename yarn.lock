@@ -2349,7 +2349,7 @@ __metadata:
     ts-jest: 29.0.3
     tslib: 2.4.0
     typescript: 4.8.4
-    wrangler: 2.1.9
+    wrangler: 2.1.10
   languageName: unknown
   linkType: soft
 
@@ -5859,12 +5859,12 @@ __metadata:
   linkType: hard
 
 "socks@npm:^2.6.2":
-  version: 2.7.0
-  resolution: "socks@npm:2.7.0"
+  version: 2.7.1
+  resolution: "socks@npm:2.7.1"
   dependencies:
     ip: ^2.0.0
     smart-buffer: ^4.2.0
-  checksum: 0b5d94e2b3c11e7937b40fc5dac1e80d8b92a330e68c51f1d271ce6980c70adca42a3f8cd47c4a5769956bada074823b53374f2dc5f2ea5c2121b222dec6eadf
+  checksum: 259d9e3e8e1c9809a7f5c32238c3d4d2a36b39b83851d0f573bfde5f21c4b1288417ce1af06af1452569cd1eb0841169afd4998f0e04ba04656f6b7f0e46d748
   languageName: node
   linkType: hard
 
@@ -6498,9 +6498,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.1.9":
-  version: 2.1.9
-  resolution: "wrangler@npm:2.1.9"
+"wrangler@npm:2.1.10":
+  version: 2.1.10
+  resolution: "wrangler@npm:2.1.10"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -6524,7 +6524,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 71f08cb3fac7005f198c09c2180cee89196219beb8aa0879f8e188c49081624329fd33f3a3b92e62642e02c7053fb172bbe516d7f1b78dcc155a622a9da7b51c
+  checksum: 42b8454a19d42273a98cf7f5fe384f86966d42cf5871101d118add590d6f36f74a51c59e8e59cd2f8bdd8f952f0d1c19d4caa8a589bb1c30da798d1f74258f4e
   languageName: node
   linkType: hard
 

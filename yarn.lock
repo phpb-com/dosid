@@ -155,10 +155,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-string-parser@npm:^7.18.10":
-  version: 7.18.10
-  resolution: "@babel/helper-string-parser@npm:7.18.10"
-  checksum: d554a4393365b624916b5c00a4cc21c990c6617e7f3fe30be7d9731f107f12c33229a7a3db9d829bfa110d2eb9f04790745d421640e3bd245bb412dc0ea123c1
+"@babel/helper-string-parser@npm:^7.19.4":
+  version: 7.19.4
+  resolution: "@babel/helper-string-parser@npm:7.19.4"
+  checksum: b2f8a3920b30dfac81ec282ac4ad9598ea170648f8254b10f475abe6d944808fb006aab325d3eb5a8ad3bea8dfa888cfa6ef471050dae5748497c110ec060943
   languageName: node
   linkType: hard
 
@@ -408,13 +408,13 @@ __metadata:
   linkType: hard
 
 "@babel/types@npm:^7.8.3":
-  version: 7.19.3
-  resolution: "@babel/types@npm:7.19.3"
+  version: 7.19.4
+  resolution: "@babel/types@npm:7.19.4"
   dependencies:
-    "@babel/helper-string-parser": ^7.18.10
+    "@babel/helper-string-parser": ^7.19.4
     "@babel/helper-validator-identifier": ^7.19.1
     to-fast-properties: ^2.0.0
-  checksum: 34a5b3db3b99a1a80ec2a784c2bb0e48769a38f1526dc377a5753a3ac5e5704663c405a393117ecc7a9df9da07b01625be7c4c3fee43ae46aba23b0c40928d77
+  checksum: 4032f6407093f80dd4f4764be676f7527d2a5c0381586967cd79683cf8af01cdc16745a381b9cef045f702f0c9b0dffd880d84ee55dad59ba01bd23d5d52a8e0
   languageName: node
   linkType: hard
 
@@ -2342,7 +2342,7 @@ __metadata:
     ts-jest: 29.0.3
     tslib: 2.4.0
     typescript: 4.8.4
-    wrangler: 2.1.10
+    wrangler: 2.1.11
   languageName: unknown
   linkType: soft
 
@@ -6490,9 +6490,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.1.10":
-  version: 2.1.10
-  resolution: "wrangler@npm:2.1.10"
+"wrangler@npm:2.1.11":
+  version: 2.1.11
+  resolution: "wrangler@npm:2.1.11"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -6516,7 +6516,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 42b8454a19d42273a98cf7f5fe384f86966d42cf5871101d118add590d6f36f74a51c59e8e59cd2f8bdd8f952f0d1c19d4caa8a589bb1c30da798d1f74258f4e
+  checksum: 5564557551c965b0b90dbf55c42f33209283e0d7b00f5d1cc7210227b4db8cf43f72590e80e0fe84a28b14831f7ca3399ef2eebecc9bd9422ef9c14a2f0e5634
   languageName: node
   linkType: hard
 

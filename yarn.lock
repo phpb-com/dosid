@@ -2341,7 +2341,7 @@ __metadata:
     ts-jest: 29.0.3
     tslib: 2.4.1
     typescript: 4.8.4
-    wrangler: 2.1.13
+    wrangler: 2.1.14
   languageName: unknown
   linkType: soft
 
@@ -6115,8 +6115,8 @@ __metadata:
   linkType: hard
 
 "tar@npm:^6.1.11, tar@npm:^6.1.2":
-  version: 6.1.11
-  resolution: "tar@npm:6.1.11"
+  version: 6.1.12
+  resolution: "tar@npm:6.1.12"
   dependencies:
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
@@ -6124,7 +6124,7 @@ __metadata:
     minizlib: ^2.1.1
     mkdirp: ^1.0.3
     yallist: ^4.0.0
-  checksum: a04c07bb9e2d8f46776517d4618f2406fb977a74d914ad98b264fc3db0fe8224da5bec11e5f8902c5b9bcb8ace22d95fbe3c7b36b8593b7dfc8391a25898f32f
+  checksum: 49d72e4420944e7ede2782d6b0826a6ede6cdab23c7de63470917e7a78166bc4d5b1a96279d3d79a85f1ba5a17cd37c0acbb3cbff19a07447691445b8b051c55
   languageName: node
   linkType: hard
 
@@ -6477,9 +6477,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.1.13":
-  version: 2.1.13
-  resolution: "wrangler@npm:2.1.13"
+"wrangler@npm:2.1.14":
+  version: 2.1.14
+  resolution: "wrangler@npm:2.1.14"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -6503,7 +6503,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 042b393ffb698cf1c10b9079b12d2081a7c77ca27d3f6cc610287bbcb6a7a8269f10e1108dcd0ff62e95f61113661795f7bc62618c8f0ddc87460ae5f07aba22
+  checksum: d642288a52cc03a5a462a7fb2d4a473f07d5a3e1d093fe4ed3b1b08329ceeac2abd2a11e545a36120054fc09e1d0d5a5f7c8d92f4fb9edb4e1a05a990b12c8e9
   languageName: node
   linkType: hard
 

@@ -2341,7 +2341,7 @@ __metadata:
     ts-jest: 29.0.3
     tslib: 2.4.1
     typescript: 4.8.4
-    wrangler: 2.1.14
+    wrangler: 2.1.15
   languageName: unknown
   linkType: soft
 
@@ -4661,9 +4661,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^7.7.1":
-  version: 7.14.0
-  resolution: "lru-cache@npm:7.14.0"
-  checksum: efdd329f2c1bb790b71d497c6c59272e6bc2d7dd060ba55fc136becd3dd31fc8346edb446275504d94cb60d3c8385dbf5267b79b23789e409b2bdf302d13f0d7
+  version: 7.14.1
+  resolution: "lru-cache@npm:7.14.1"
+  checksum: d72c6713c6a6d86836a7a6523b3f1ac6764768cca47ec99341c3e76db06aacd4764620e5e2cda719a36848785a52a70e531822dc2b33fb071fa709683746c104
   languageName: node
   linkType: hard
 
@@ -6477,9 +6477,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.1.14":
-  version: 2.1.14
-  resolution: "wrangler@npm:2.1.14"
+"wrangler@npm:2.1.15":
+  version: 2.1.15
+  resolution: "wrangler@npm:2.1.15"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -6503,7 +6503,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: d642288a52cc03a5a462a7fb2d4a473f07d5a3e1d093fe4ed3b1b08329ceeac2abd2a11e545a36120054fc09e1d0d5a5f7c8d92f4fb9edb4e1a05a990b12c8e9
+  checksum: 77a56118256b24f87cd5cd87dca25488d71774f1af970d1eb1d617208fcb9cca144f659be65c4350671e46fff9d2de4ae89b751edc1af07a7569cb0ee3f86a8d
   languageName: node
   linkType: hard
 

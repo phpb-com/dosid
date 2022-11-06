@@ -408,13 +408,13 @@ __metadata:
   linkType: hard
 
 "@babel/types@npm:^7.8.3":
-  version: 7.20.0
-  resolution: "@babel/types@npm:7.20.0"
+  version: 7.20.2
+  resolution: "@babel/types@npm:7.20.2"
   dependencies:
     "@babel/helper-string-parser": ^7.19.4
     "@babel/helper-validator-identifier": ^7.19.1
     to-fast-properties: ^2.0.0
-  checksum: 8729b1114c707a03625cd79e3ae3a28d69b36ddcf804cb0a4599af226e5e9fad71665bdc0e56c43527ecfcabc545d9c797231f5ce718ae1ab52d31a57b6c2024
+  checksum: 57e76e5f21876135f481bfd4010c87f2d38196bb0a2bc60a28d6e55e3afa90cdd9accf164e4cb71bdfb620517fa0a0cb5600cdce36c21d59fdaccfbb899c024c
   languageName: node
   linkType: hard
 
@@ -2327,7 +2327,7 @@ __metadata:
     eslint-config-prettier: 8.5.0
     eslint-config-standard: 17.0.0
     eslint-plugin-import: 2.26.0
-    eslint-plugin-n: 15.4.0
+    eslint-plugin-n: 15.5.0
     eslint-plugin-promise: 6.1.1
     hashids: 2.2.10
     husky: 8.0.1
@@ -2787,9 +2787,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:15.4.0":
-  version: 15.4.0
-  resolution: "eslint-plugin-n@npm:15.4.0"
+"eslint-plugin-n@npm:15.5.0":
+  version: 15.5.0
+  resolution: "eslint-plugin-n@npm:15.5.0"
   dependencies:
     builtins: ^5.0.1
     eslint-plugin-es: ^4.1.0
@@ -2801,7 +2801,7 @@ __metadata:
     semver: ^7.3.7
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: 30c82ea4af765d5c15afda0dc09302fd98963a2965b05c3f2a8048d586a78cc3ab53d9dbb3babbd1b926bdf9aab4e2c4353cce9088d8931000363fdbccc99b51
+  checksum: d5f77b026f32822798e7a6a1d48c3e96c6f5e03899af8a42458fe14d3dabc5956b5ad242ed6723d2296354bee7f1a230b0b4a27a6de10608c9519c198ae1b4d7
   languageName: node
   linkType: hard
 

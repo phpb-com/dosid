@@ -434,10 +434,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:3.17.0":
-  version: 3.17.0
-  resolution: "@cloudflare/workers-types@npm:3.17.0"
-  checksum: d3b132ac58de812c4cfe190b517b864b21de264cfe9873d76fe63f535700f7d6200ee721d4b64d71569849ce276132b1bf20ede1de5a0f3151dd0abe8006372f
+"@cloudflare/workers-types@npm:3.19.0":
+  version: 3.19.0
+  resolution: "@cloudflare/workers-types@npm:3.19.0"
+  checksum: e381b524cea7dbe2a6b6005fef366784f44c23f1dbea7b90ce41540da41c78f81fc16f820aaa68ba668769f58aed6c76474a5ac9950481ca770e22dd9d115ad9
   languageName: node
   linkType: hard
 
@@ -2340,7 +2340,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dosid@workspace:."
   dependencies:
-    "@cloudflare/workers-types": 3.17.0
+    "@cloudflare/workers-types": 3.19.0
     "@jest/types": 29.3.1
     "@rollup/plugin-commonjs": 24.0.0
     "@rollup/plugin-node-resolve": 15.0.1

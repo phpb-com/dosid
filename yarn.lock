@@ -2349,7 +2349,7 @@ __metadata:
     ts-jest: 29.0.5
     tslib: 2.5.0
     typescript: 4.9.4
-    wrangler: 2.8.1
+    wrangler: 2.9.0
   languageName: unknown
   linkType: soft
 
@@ -4989,11 +4989,9 @@ __metadata:
   linkType: hard
 
 "minipass@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "minipass@npm:4.0.0"
-  dependencies:
-    yallist: ^4.0.0
-  checksum: 7a609afbf394abfcf9c48e6c90226f471676c8f2a67f07f6838871afb03215ede431d1433feffe1b855455bcb13ef0eb89162841b9796109d6fed8d89790f381
+  version: 4.0.1
+  resolution: "minipass@npm:4.0.1"
+  checksum: 48eb3141cc247b44f738944cbd789aedeed9288ebdb64c7de9b3bf23e9e71d611381bfecf643d877d25f7ca9f3d5ab7b6757ef6f46282086812ac5372b7cd291
   languageName: node
   linkType: hard
 
@@ -6572,9 +6570,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:2.8.1":
-  version: 2.8.1
-  resolution: "wrangler@npm:2.8.1"
+"wrangler@npm:2.9.0":
+  version: 2.9.0
+  resolution: "wrangler@npm:2.9.0"
   dependencies:
     "@cloudflare/kv-asset-handler": ^0.2.0
     "@esbuild-plugins/node-globals-polyfill": ^0.1.1
@@ -6598,7 +6596,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: b9775fb3104b642242fcfa4b3531e091aeb72a514f1660b976edfc659457f9cd2117e9d3e7d7f0f23b1bb251a32851cd048095628b3bf61c6b58fabf0f25762f
+  checksum: ee05beeb8e36dfe4b1bcdab2ae63a93d1ebabb0a80c9575bb3e58ed794756950a98dbee7dbbf4f8fcf1c33a405381d77df63684c1726347591513f38f3b2f182
   languageName: node
   linkType: hard
 

@@ -2491,7 +2491,7 @@ __metadata:
     eslint-plugin-import: 2.27.5
     eslint-plugin-n: 15.6.1
     eslint-plugin-promise: 6.1.1
-    hashids: 2.2.10
+    hashids: 2.2.11
     husky: 8.0.3
     isomorphic-fetch: 3.0.0
     jest: 29.4.3
@@ -3571,10 +3571,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hashids@npm:2.2.10":
-  version: 2.2.10
-  resolution: "hashids@npm:2.2.10"
-  checksum: b65982baec1f184e287c9f2ae80303cc62ad752bdb742271754f82b81f7fdde987456d8a0440a1f8639af07fafa402a10ef77674d524247c098be07de3a765c8
+"hashids@npm:2.2.11":
+  version: 2.2.11
+  resolution: "hashids@npm:2.2.11"
+  checksum: b509b08449f2be4acda3ed6090b1a36034929c0e31f01cb21945cceb66f5e8115ed25a9d75f086ce7e4bf785761884f490a8a7c097ea6187fa0b29f16f796059
   languageName: node
   linkType: hard
 
@@ -4760,9 +4760,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^7.7.1":
-  version: 7.14.1
-  resolution: "lru-cache@npm:7.14.1"
-  checksum: d72c6713c6a6d86836a7a6523b3f1ac6764768cca47ec99341c3e76db06aacd4764620e5e2cda719a36848785a52a70e531822dc2b33fb071fa709683746c104
+  version: 7.16.0
+  resolution: "lru-cache@npm:7.16.0"
+  checksum: 1a5511a0e695154c37f443c495ebcf3170ec8c291df62e140329cf0c48e2549db836e69371853a28286dc9de73a98f486a7566c64246249a6041c43d4a28bc60
   languageName: node
   linkType: hard
 

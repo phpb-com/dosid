@@ -1466,13 +1466,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:29.4.0":
-  version: 29.4.0
-  resolution: "@types/jest@npm:29.4.0"
+"@types/jest@npm:29.4.1":
+  version: 29.4.1
+  resolution: "@types/jest@npm:29.4.1"
   dependencies:
     expect: ^29.0.0
     pretty-format: ^29.0.0
-  checksum: 23760282362a252e6690314584d83a47512d4cd61663e957ed3398ecf98195fe931c45606ee2f9def12f8ed7d8aa102d492ec42d26facdaf8b78094a31e6568e
+  checksum: 75cdd1804615b663b88844eef61cb7c8104d65baf718190a1cd88ce199412dbe2ee136df3698604cc258a9a62ba7cbd7bd7712a17d8cb748909263ef56d6aac3
   languageName: node
   linkType: hard
 
@@ -2525,7 +2525,7 @@ __metadata:
     "@rollup/plugin-commonjs": 24.0.1
     "@rollup/plugin-node-resolve": 15.0.1
     "@rollup/plugin-typescript": 11.0.0
-    "@types/jest": 29.4.0
+    "@types/jest": 29.4.1
     "@typescript-eslint/eslint-plugin": latest
     "@typescript-eslint/parser": latest
     eslint: 8.36.0
@@ -5076,9 +5076,9 @@ __metadata:
   linkType: hard
 
 "minipass@npm:^4.0.0":
-  version: 4.2.4
-  resolution: "minipass@npm:4.2.4"
-  checksum: c664f2ae4401408d1e7a6e4f50aca45f87b1b0634bc9261136df5c378e313e77355765f73f59c4a5abcadcdf43d83fcd3eb14e4a7cdcce8e36508e2290345753
+  version: 4.2.5
+  resolution: "minipass@npm:4.2.5"
+  checksum: 4f9c19af23a5d4a9e7156feefc9110634b178a8cff8f8271af16ec5ebf7e221725a97429952c856f5b17b30c2065ebd24c81722d90c93d2122611d75b952b48f
   languageName: node
   linkType: hard
 

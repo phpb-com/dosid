@@ -2541,7 +2541,7 @@ __metadata:
     eslint-plugin-import: 2.27.5
     eslint-plugin-n: 15.7.0
     eslint-plugin-promise: 6.1.1
-    hashids: 2.2.11
+    hashids: 2.3.0
     husky: 8.0.3
     isomorphic-fetch: 3.0.0
     jest: 29.5.0
@@ -3645,10 +3645,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hashids@npm:2.2.11":
-  version: 2.2.11
-  resolution: "hashids@npm:2.2.11"
-  checksum: b509b08449f2be4acda3ed6090b1a36034929c0e31f01cb21945cceb66f5e8115ed25a9d75f086ce7e4bf785761884f490a8a7c097ea6187fa0b29f16f796059
+"hashids@npm:2.3.0":
+  version: 2.3.0
+  resolution: "hashids@npm:2.3.0"
+  checksum: b56393bf0e7ff476aff48010e0d8cd386a47c62af057d2a0ceb0053c1063dc496d1a4398ad714bf97c4dccba4d2a18a7ad9b9ee9933c398aa4323ecc79bbe107
   languageName: node
   linkType: hard
 

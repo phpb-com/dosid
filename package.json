@@ -20,7 +20,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "3.19.0",
     "@jest/types": "29.6.1",
-    "@rollup/plugin-commonjs": "24.1.0",
+    "@rollup/plugin-commonjs": "25.0.4",
     "@rollup/plugin-node-resolve": "15.1.0",
     "@rollup/plugin-typescript": "11.1.2",
     "@types/jest": "29.5.3",

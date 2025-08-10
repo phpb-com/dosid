@@ -1140,14 +1140,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-typescript@npm:11.1.2":
-  version: 11.1.2
-  resolution: "@rollup/plugin-typescript@npm:11.1.2"
+"@rollup/plugin-typescript@npm:11.1.6":
+  version: 11.1.6
+  resolution: "@rollup/plugin-typescript@npm:11.1.6"
   dependencies:
-    "@rollup/pluginutils": ^5.0.1
+    "@rollup/pluginutils": ^5.1.0
     resolve: ^1.22.1
   peerDependencies:
-    rollup: ^2.14.0||^3.0.0
+    rollup: ^2.14.0||^3.0.0||^4.0.0
     tslib: "*"
     typescript: ">=3.7.0"
   peerDependenciesMeta:
@@ -1155,7 +1155,7 @@ __metadata:
       optional: true
     tslib:
       optional: true
-  checksum: f4655a35e08639574e86dbce578b76468ee8627e4a3d8a46b7e0703d5d98c39a9bda9aa7144510aae11c5d8ce9c3b065e7f3e52dd31fbc6780015dd7802e01f7
+  checksum: 3f5b981f4d9c9501be1f16396f7b6d4ae584cb1b61e9f0bed66f98245fb77f249caea2b9b5f222f933b46fd9043c1f2664a7445aefa386c1ffbb4f0b80fc6004
   languageName: node
   linkType: hard
 
@@ -1172,6 +1172,22 @@ __metadata:
     rollup:
       optional: true
   checksum: edea15e543bebc7dcac3b0ac8bc7b8e8e6dbd46e2864dbe5dd28072de1fbd5b0e10d545a610c0edaa178e8a7ac432e2a2a52e547ece1308471412caba47db8ce
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^5.1.0":
+  version: 5.2.0
+  resolution: "@rollup/pluginutils@npm:5.2.0"
+  dependencies:
+    "@types/estree": ^1.0.0
+    estree-walker: ^2.0.2
+    picomatch: ^4.0.2
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+  peerDependenciesMeta:
+    rollup:
+      optional: true
+  checksum: d34a7215cddbc11fff7663f8ca05e8e04b48af4c4b19f5545902bef07e508c029cd254d6c5ae66d2e3309d459d44f326f1adaa6b6a4dae3c27bd26a3baef70a4
   languageName: node
   linkType: hard
 
@@ -2475,7 +2491,7 @@ __metadata:
     "@jest/types": 29.6.3
     "@rollup/plugin-commonjs": 25.0.4
     "@rollup/plugin-node-resolve": 15.2.0
-    "@rollup/plugin-typescript": 11.1.2
+    "@rollup/plugin-typescript": 11.1.6
     "@types/jest": 29.5.3
     "@typescript-eslint/eslint-plugin": latest
     "@typescript-eslint/parser": latest
@@ -5549,6 +5565,13 @@ __metadata:
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
+  languageName: node
+  linkType: hard
+
+"picomatch@npm:^4.0.2":
+  version: 4.0.3
+  resolution: "picomatch@npm:4.0.3"
+  checksum: 6817fb74eb745a71445debe1029768de55fd59a42b75606f478ee1d0dc1aa6e78b711d041a7c9d5550e042642029b7f373dc1a43b224c4b7f12d23436735dba0
   languageName: node
   linkType: hard
 
